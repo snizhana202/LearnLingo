@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+.app-shell {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    flex: 1;
+  }
+}
