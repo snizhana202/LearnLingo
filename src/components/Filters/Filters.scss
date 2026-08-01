@@ -1,0 +1,43 @@
+@import "../../styles/variables.scss";
+
+.filters {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28571;
+    color: #8a8a89;
+
+    select {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 18px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      background-color: #fff;
+
+      &:focus-visible {
+        outline: none;
+        border-color: var(--color-accent-dark);
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .filters__field {
+    min-width: 100%;
+  }
+}

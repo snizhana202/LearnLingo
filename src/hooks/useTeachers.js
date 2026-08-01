@@ -26,5 +26,5 @@ export function useTeachers(filters) {
 
   const loadMore = () => setPage((prev) => prev + 1);
 
-  return { teachers: items, hasMore, loading, error, loadMore };
+  return { teachers: items, allTeachers, hasMore, loading, error, loadMore };
 }
