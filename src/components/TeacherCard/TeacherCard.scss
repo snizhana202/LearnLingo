@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .teacher-card {
   display: flex;
@@ -7,9 +7,11 @@
   border-radius: 24px;
 
   &__avatar {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
+    border: 3px solid #fbe9ba;
+    padding: 12px;
+    border-radius: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     flex-shrink: 0;
   }
@@ -28,25 +30,24 @@
   }
 
   &__eyebrow {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--color-muted);
+    font-weight: 500;
+    line-height: 1.5;
+    color: #8a8a89;
   }
 
   &__meta {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    color: var(--color-muted);
+    gap: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #121417;
     white-space: nowrap;
   }
 
   &__dot {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
+    width: 1px;
+    height: 16px;
     background: var(--color-line);
   }
 

@@ -32,6 +32,8 @@ export default function TeacherCard({ teacher, isFavorite, onToggleFavorite }) {
           <span className="teacher-card__eyebrow">Languages</span>
 
           <div className="teacher-card__meta">
+            <span>Lessons online</span>
+            <span className="teacher-card__dot" />
             <span>Lessons done: {lessons_done}</span>
             <span className="teacher-card__dot" />
             <span>Rating: {rating}</span>
