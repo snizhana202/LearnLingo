@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Filters from '../../components/Filters/Filters';
 import TeacherCard from '../../components/TeacherCard/TeacherCard';
 import { useTeachers } from '../../hooks/useTeachers';
@@ -9,6 +9,11 @@ export default function Teachers() {
   const [filters, setFilters] = useState({});
   const { teachers, allTeachers, hasMore, loading, loadMore } = useTeachers(filters);
   const { favoriteIds, toggleFavorite } = useFavorites();
+
+  useEffect(() => {
+    document.body.classList.add('page-bg-muted');
+    return () => document.body.classList.remove('page-bg-muted');
+  }, []);
 
   return (
     <div className="container teachers-page">
