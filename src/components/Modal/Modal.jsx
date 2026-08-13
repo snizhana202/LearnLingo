@@ -1,21 +1,22 @@
-import { useEffect } from 'react';
-import { createPortal } from 'react-dom';
-import './Modal.scss';
+import { useEffect } from "react";
+import { createPortal } from "react-dom";
+import "./Modal.scss";
+import { IoCloseOutline } from "react-icons/io5";
 
 export default function Modal({ isOpen, onClose, children }) {
   useEffect(() => {
     if (!isOpen) return undefined;
 
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape') onClose();
+      if (event.key === "Escape") onClose();
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    document.body.style.overflow = 'hidden';
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
     };
   }, [isOpen, onClose]);
 
@@ -28,12 +29,17 @@ export default function Modal({ isOpen, onClose, children }) {
   return createPortal(
     <div className="modal-backdrop" onMouseDown={handleBackdropClick}>
       <div className="modal-window" role="dialog" aria-modal="true">
-        <button type="button" className="modal-window__close" onClick={onClose} aria-label="Закрити">
-          &times;
+        <button
+          type="button"
+          className="modal-window__close"
+          onClick={onClose}
+          aria-label="Close modal"
+        >
+          <IoCloseOutline className="modal-window__closebtn" />
         </button>
         {children}
       </div>
     </div>,
-    document.body
+    document.body,
   );
 }
