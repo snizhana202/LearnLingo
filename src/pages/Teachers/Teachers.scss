@@ -1,6 +1,10 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .teachers-page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 20px 0 96px 0;
 
   &__status {
     color: var(--color-muted);
@@ -9,7 +13,6 @@
   }
 
   &__list {
-    padding-top: 32px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -17,6 +20,10 @@
 
   &__load-more {
     display: flex;
-    margin: 32px auto 0;
+    align-self: center;
+    font-size: 18px;
+    width: 183px;
+    height: 60px;
+    margin-top: 32px;
   }
 }

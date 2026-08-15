@@ -4,6 +4,7 @@ import TeacherCard from '../../components/TeacherCard/TeacherCard';
 import { useTeachers } from '../../hooks/useTeachers';
 import { useFavorites } from '../../hooks/useFavorites';
 import './Teachers.scss';
+import '../../styles/base.scss';
 
 export default function Teachers() {
   const [filters, setFilters] = useState({});
@@ -36,7 +37,7 @@ export default function Teachers() {
       </ul>
 
       {hasMore && (
-        <button type="button" className="btn btn-outline teachers-page__load-more" onClick={loadMore}>
+        <button type="button" className="btn btn-primary teachers-page__load-more" onClick={loadMore}>
           Load more
         </button>
       )}
