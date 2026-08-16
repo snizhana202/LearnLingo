@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { FaRegHeart } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
+import { FaRegHeart, FaHeart, FaStar } from "react-icons/fa";
 import Modal from "../Modal/Modal";
 import BookingForm from "../BookingForm/BookingForm";
 import "./TeacherCard.scss";
 import { FiBookOpen } from "react-icons/fi";
-import { FaStar } from "react-icons/fa";
 
 export default function TeacherCard({ teacher, isFavorite, onToggleFavorite }) {
   const [expanded, setExpanded] = useState(false);

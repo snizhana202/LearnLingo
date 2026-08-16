@@ -19,7 +19,7 @@ export function useFavorites() {
   const toggleFavorite = useCallback(
     async (teacherId) => {
       if (!isLoggedIn) {
-        toast.info('Увійдіть, щоб додавати викладачів в обране.');
+        toast.info('Log in to add teachers to favorites.');
         return;
       }
 
