@@ -1,16 +1,58 @@
-# React + Vite
+# LearnLingo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LearnLingo is a web application that connects students with online language tutors. Users can browse a catalog of teachers, filter them by language, level and price, save favorites, and book a trial lesson.
 
-Currently, two official plugins are available:
+Built as a learning project based on a provided technical specification and Figma design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+🔗 [learn-lingo-five-rouge.vercel.app](https://learn-lingo-five-rouge.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Authentication (registration, login, logout) via Firebase
+- Teacher catalog with pagination ("Load more")
+- Filtering by language, level and price
+- Favorites list for logged-in users, persisted across reloads
+- Expandable teacher cards with reviews
+- Trial lesson booking via validated modal form
+- Protected Favorites route
+- Client-side routing with React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- **React** (Vite)
+- **React Router** — client-side routing
+- **Firebase** — Authentication & Realtime Database
+- **React Hook Form** + **Yup** — form handling and validation
+- **React Toastify** — toast notifications
+- **Sass (SCSS)** — styling
+
+## Getting Started
+
+```bash
+git clone https://github.com/snizhana202/LearnLingo.git
+cd LearnLingo
+npm install
+```
+
+Create a `.env` file in the project root:
+
+VITE_FIREBASE_API_KEY=
+VITE_FIREBASE_AUTH_DOMAIN=
+VITE_FIREBASE_DATABASE_URL=
+VITE_FIREBASE_PROJECT_ID=
+VITE_FIREBASE_STORAGE_BUCKET=
+VITE_FIREBASE_MESSAGING_SENDER_ID=
+VITE_FIREBASE_APP_ID=
+
+
+Run locally:
+
+```bash
+npm run dev
+```
+
+## Author
+
+**Snizhana** — [GitHub](https://github.com/snizhana202) · [LinkedIn](https://www.linkedin.com/in/snizhana-petrushka/)
